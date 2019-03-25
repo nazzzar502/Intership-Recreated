@@ -4,14 +4,23 @@ namespace InternshipTest.Institution
 {
     public class University
     {
+        protected Student[] students = new Student[99];
+        string universityName;
         public University(string name)
         {
-            //TODO: Implementation is needed  
+            universityName = name;
         }
+
+        public Student[] GetStudents(){ return students; }
 
         public void AddStudent(Student student)
         {
-            //TODO: Implementation is needed
+            students[student.GetstudentId()] = student;
+        }
+
+        public void AddStudentsFromArray(Student[] studentsFromArray)
+        {
+            students = studentsFromArray;
         }
     }
 }
