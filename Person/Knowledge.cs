@@ -2,9 +2,10 @@ namespace InternshipTest
 {
     public class Knowledge
     {
+        public int value;
         public Knowledge(int level)
         {
-            //TODO: Implementation is needed
+            value = level;
         }
     }
 }
