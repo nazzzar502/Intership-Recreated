@@ -3,18 +3,20 @@ namespace InternshipTest.Person
     public class Student
        
     {
-        public Knowledge studentknowledge;
-        public string studentname;
+        public Knowledge studentKnowledge;
+        public string studentName;
+        public int studentId;
 
-        public Student(string name, Knowledge knowledge)
+        public Student(string name, int Id)
         {
-            studentname = name;
+            studentName = name;
+            studentId = Id;
            
         }
 
         public void SetKnowledge(Knowledge knowledge)
         {
-            studentknowledge = knowledge;
+            studentKnowledge = knowledge;
         }
     }
 }
