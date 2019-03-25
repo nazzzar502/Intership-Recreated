@@ -18,8 +18,8 @@ namespace InternshipTest.Institution.InterLink
             {
                 if (i != null)
                 {
-                    Console.WriteLine(i.studentName);
-                    Console.WriteLine(i.studentKnowledge.value);
+                    Console.WriteLine(i.GetstudentName());
+                    Console.WriteLine(i.GetstudentKnowledge().GetValue());
                 }
 
             }

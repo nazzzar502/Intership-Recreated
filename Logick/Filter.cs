@@ -24,19 +24,19 @@ namespace internshiptest.Logick
             int number = 0;
             int count = 0;
 
-           foreach (Student i in university.students)
+           foreach (Student i in university.GetStudents())
             {
                 
-                if (i != null) {  knowledge_sum = knowledge_sum + i.studentKnowledge.value; number++; }
+                if (i != null) {  knowledge_sum = knowledge_sum + i.GetstudentKnowledge().GetValue(); number++; }
                 
             }
             knowledge_sum = knowledge_sum / number;
            
            
-            foreach (Student i in university.students)
+            foreach (Student i in university.GetStudents())
             {
                 count++;
-                if (i != null) { if (i.studentKnowledge.value > knowledge_sum) { interns[count] = i; } }
+                if (i != null) { if (i.GetstudentKnowledge().GetValue() > knowledge_sum) { interns[count] = i; } }
                     
             }
             return interns;

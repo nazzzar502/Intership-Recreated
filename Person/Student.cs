@@ -3,9 +3,9 @@ namespace InternshipTest.Person
     public class Student
        
     {
-        public Knowledge studentKnowledge;
-        public string studentName;
-        public int studentId;
+        private Knowledge studentKnowledge;
+        private string studentName;
+        private int studentId;
 
         public Student(string name, int Id)
         {
@@ -17,6 +17,21 @@ namespace InternshipTest.Person
         public void SetKnowledge(Knowledge knowledge)
         {
             studentKnowledge = knowledge;
+        }
+
+        public string GetstudentName()
+        {
+            return studentName;
+        }
+
+        public Knowledge GetstudentKnowledge()
+        {
+            return studentKnowledge;
+        }
+
+        public int GetstudentId()
+        {
+            return studentId;
         }
     }
 }
