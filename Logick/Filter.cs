@@ -8,6 +8,13 @@ namespace internshiptest.Logick
 {
     class Filter
     {
+        string filtername;
+
+        public Filter(string name)
+        {
+            filtername = name;
+        }
+
         public Student[] interns = new Student[99];
 
         public Student[] StudentsByKnowledge(University university)
@@ -15,20 +22,21 @@ namespace internshiptest.Logick
 
             int knowledge_sum = 0;
             int number = 0;
+            int count = 0;
 
            foreach (Student i in university.students)
             {
-                number++;
-                if (i != null) {  knowledge_sum = knowledge_sum + i.studentKnowledge.value; }
+                
+                if (i != null) {  knowledge_sum = knowledge_sum + i.studentKnowledge.value; number++; }
                 
             }
             knowledge_sum = knowledge_sum / number;
-            number = 0;
+           
            
             foreach (Student i in university.students)
             {
-                number++;
-                if (i != null) { if (i.studentKnowledge.value > knowledge_sum) { interns[number] = i; } }
+                count++;
+                if (i != null) { if (i.studentKnowledge.value > knowledge_sum) { interns[count] = i; } }
                     
             }
             return interns;
