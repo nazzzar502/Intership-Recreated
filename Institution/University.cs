@@ -11,7 +11,7 @@ namespace InternshipTest.Institution
             universityName = name;
         }
 
-        public void AddStudent(Student student)
+        public void AddStudents(Student student)
         {
             students[student.studentId] = student;
         }

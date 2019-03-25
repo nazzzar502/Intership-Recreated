@@ -1,16 +1,28 @@
+using InternshipTest.Person;
+using System;
+
 namespace InternshipTest.Institution.InterLink
 {
-    public class Internship
+    public class Internship : University
     {
-        public Internship(string name)
+        string intershipName;
+
+        public Internship(string name):base(name)
         {
-            //TODO: Implementation is needed      
+            intershipName = name;
         }
 
-        public string GetStudents()
+        public void ShowStudents()
         {
-            //TODO: Implementation is needed
-            return "Andrew Maslenko\nJulia Veselkina\n";
+            foreach (Student i in students)
+            {
+                if (i != null)
+                {
+                    Console.WriteLine(i.studentName);
+                    Console.WriteLine(i.studentKnowledge.value);
+                }
+
+            }
         }
     }
 }
